@@ -13,82 +13,20 @@
     <div class="list-body">
         <h1>Shopping list</h1>
         <div class="input-box">
-            <form action="add" method="get">
-                <label>Add Item: </label>
-                <input type="text" name="item">
-                <input id="addNeed" type="submit" value="Need">
-                <input id="addHave" type="submit" value="Have">
-            </form>
+
+            <label>Add Item: </label>
+            <input type="text" name="item">
+            <button id="addNeed" type="submit">Need</button>
+            <button id="addHave" type="submit">Have</button>
+
         </div>
         <h2> Need: </h2>
-        <ul class='check-list'>
-            <li>
-                <Label>
-                    <input type="checkbox" name="item" class="real-checkbox">
-                    <span class="custom-checkbox"></span>
-                    Milk
-                </Label>
-                <a href="#">&#10006;</a>
-            </li>
-            <li>
-                <Label>
-                    <input type="checkbox" name="item" class="real-checkbox">
-                    <span class="custom-checkbox"></span>
-                    Eggs
-                    </span>
-                </Label>
-                <a href="#">&#10006;</a>
-            </li>
-            <li>
-                <Label>
-                    <input type="checkbox" name="item" class="real-checkbox">
-                    <span class="custom-checkbox"></span>
-                    Kitten Food
-                    </span>
-                </Label>
-                <a href="#">&#10006;</a>
-            </li>
-            <li>
-                <Label>
-                    <input type="checkbox" name="item" class="real-checkbox">
-                    <span class="custom-checkbox"></span>
-                    Bacon
-                </Label>
-                <a href="#">&#10006;</a>
-            </li>
+        <ul class='need-list'>
+
         </ul>
         <h2> Have: </h2>
-        <ul class='check-list'>
-            <li>
-                <Label>
-                    <input type="checkbox" name="item" class="real-checkbox" checked>
-                    <span class="custom-checkbox"></span>
-                    Steak
-                </Label>
-                <a href="#">&#10006;</a>
-            </li>
-            <li><Label><input type="checkbox" name="item" class="real-checkbox" checked>
-                    <span class="custom-checkbox"></span>
-                    Cream
-                </Label>
-                <a href="#">&#10006;</a>
-            </li>
-            <li>
-                <Label>
-                    <input type="checkbox" name="item" class="real-checkbox" checked>
-                    <span class="custom-checkbox"></span>
-                    Cheese
-                </Label>
-                <a href="#">&#10006;</a>
-            </li>
-            <li>
-                <Label>
-                    <input type="checkbox" name="item" class="real-checkbox" checked>
-                    <span class="custom-checkbox"></span>
-                    Apples
-                </Label>
-                <a href="#">&#10006;</a>
-            </li>
+        <ul class='have-list'>
+
         </ul>
     </div>
 </body>

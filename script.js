@@ -3,6 +3,10 @@ const needBtn = document.querySelector('#addNeed');
 const haveBtn = document.querySelector('#addHave');
 const haveList = document.querySelector('.have-list');
 const needList = document.querySelector('.need-list');
+const listBody = document.querySelector('.list-body')
+
+
+
 
 
 const list = [{ name: 'Milk', checked: false },
@@ -27,7 +31,7 @@ function renderItem(inputItem) {
             needList.insertAdjacentHTML('afterbegin', `
             <li>
             <Label>
-                <input type="checkbox" name="item" class="real-checkbox">
+                <input type="checkbox" class="real-checkbox">
                 <span class="custom-checkbox"></span>
                ${el.name}
             </Label>
@@ -38,7 +42,7 @@ function renderItem(inputItem) {
             haveList.insertAdjacentHTML('afterbegin', `
             <li>
             <Label>
-                <input type="checkbox" name="item" class="real-checkbox" checked>
+                <input type="checkbox" class="real-checkbox" checked>
                 <span class="custom-checkbox"></span>
                ${el.name}
             </Label>
@@ -61,4 +65,28 @@ haveBtn.addEventListener('click', (ev) => {
     renderItem();
     input.value = '';
 })
+
+
+
+
+listBody.addEventListener('click', (ev) => {
+    if (ev.target.closest('Label')) {
+        list.forEach(el => {
+            if (el.name === ev.target.closest('Label').innerText.trim()) {
+                el.checked = !el.checked;
+            }
+        })
+    }
+    if (ev.target.tagName === "A") {
+        let indDel
+        list.forEach((el, ind) => {
+            if (el.name === ev.target.closest('li').firstElementChild.innerText.trim()) {
+                indDel = ind
+            }
+        })
+        list.splice(indDel, 1)
+    }
+    renderItem();
+})
+
 renderItem();

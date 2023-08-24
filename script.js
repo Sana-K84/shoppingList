@@ -5,10 +5,6 @@ const haveList = document.querySelector('.have-list');
 const needList = document.querySelector('.need-list');
 const listBody = document.querySelector('.list-body')
 
-
-
-
-
 const list = [{ name: 'Milk', checked: false },
 { name: 'Steak', checked: true },
 { name: 'Eggs', checked: false },
@@ -55,19 +51,22 @@ function renderItem(inputItem) {
 }
 
 needBtn.addEventListener('click', (ev) => {
-    list.push({ name: inputItem, checked: false })
-    renderItem();
-    input.value = '';
+    if (inputItem) {
+        list.push({ name: inputItem, checked: false })
+        renderItem();
+        input.value = '';
+        inputItem = '';
+    }
 })
 
 haveBtn.addEventListener('click', (ev) => {
-    list.push({ name: inputItem, checked: true })
-    renderItem();
-    input.value = '';
+    if (inputItem) {
+        list.push({ name: inputItem, checked: true })
+        renderItem();
+        input.value = '';
+        inputItem = '';
+    }
 })
-
-
-
 
 listBody.addEventListener('click', (ev) => {
     if (ev.target.closest('Label')) {

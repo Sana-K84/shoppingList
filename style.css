@@ -1,5 +1,13 @@
+:root {
+    font-size: 14px;
+}
+
+body {
+    padding: 5px;
+}
+
 .list-body {
-    background: black;
+    background: #42a5f5;
     color: white;
     border-radius: 1em;
     padding: 1em;
@@ -7,15 +15,18 @@
     top: 50%;
     left: 50%;
     margin-right: -50%;
+    margin-top: 5px;
     transform: translate(-50%, -50%)
 }
 
 
 input[type='text'] {
     border: 1px solid white;
-    border-radius: 1rem;
+    border-radius: 2rem;
     margin: 10px 0;
     padding: 5px;
+    width: 100%;
+    font-size: 24px;
 }
 
 ul {
@@ -27,7 +38,7 @@ ul {
 li {
     display: block;
     border: 1px solid white;
-    border-radius: 1rem;
+    border-radius: 2rem;
     margin: 10px 0;
     padding: 5px;
 }
@@ -54,21 +65,21 @@ input[type='checkbox']:checked::after {
 
 .custom-checkbox {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     background: #fff;
     border: 2px solid #7e9bbd;
     border-radius: 4px;
     vertical-align: sub;
-    margin-right: 5px;
+    margin-right: 10px;
     position: relative;
 }
 
 .custom-checkbox::before {
     content: '';
     display: inline-block;
-    width: 13px;
-    height: 13px;
+    width: 15px;
+    height: 15px;
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 15 15' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.3 15L15 1.2 13.7 0 5.1 12.3 1.1 8 0 9.4 5.3 15z' fill='%23005bff'/%3E%3C/svg%3E");
     background-size: contain;
     background-repeat: no-repeat;
@@ -76,14 +87,12 @@ input[type='checkbox']:checked::after {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) scale(0);
-    margin-top: 1px;
     transition: 0.2s ease-in;
 }
 
 li a {
     float: right;
     margin: 0 5px 0 1px;
-
     text-decoration: none;
 }
 
@@ -91,6 +100,51 @@ h1 {
     text-align: center;
 }
 
-.input-box {}
+.input-body {
+    width: 350px;
 
-.check-list {}
+}
+
+.btn-need {
+    background: #51A3B8;
+    font-size: 14px;
+    color: white;
+    border-radius: 2rem;
+    box-shadow: 0 2px 0px #387796;
+    display: inline-block;
+    transition: all .2s;
+    position: relative;
+    padding: 10px 15px;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+.btn-need:active {
+    top: 3px;
+    box-shadow: 0 0px 0px #387796;
+    transition: all .1s;
+}
+
+.btn-have {
+    background: #7986cb;
+    font-size: 14px;
+    color: white;
+    border-radius: 2rem;
+    box-shadow: 0 2px 0px #3f51b5;
+    display: inline-block;
+    transition: all .2s;
+    position: relative;
+    padding: 10px 15px;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+.btn-have:active {
+    top: 3px;
+    box-shadow: 0 0px 0px #3f51b5;
+    transition: all .1s;
+}

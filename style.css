@@ -1,32 +1,57 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     font-size: 14px;
 }
 
 body {
-    padding: 5px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 .list-body {
     background: #42a5f5;
+    width: 350px;
     color: white;
     border-radius: 1em;
     padding: 1em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    margin-top: 5px;
-    transform: translate(-50%, -50%)
+    margin: 10px;
+
 }
 
 
 input[type='text'] {
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 15px 0;
     border: 1px solid white;
     border-radius: 2rem;
     margin: 10px 0;
     padding: 5px;
     width: 100%;
-    font-size: 24px;
+
+}
+
+input[type='text']::placeholder {
+    color: #212529;
+    opacity: 0.4;
+}
+
+input[type='text']:focus {
+    color: #212529;
+    background-color: #fff;
+
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(255 255 255 / 25%);
+
 }
 
 ul {
@@ -39,6 +64,7 @@ li {
     display: block;
     border: 1px solid white;
     border-radius: 2rem;
+    font-size: 16px;
     margin: 10px 0;
     padding: 5px;
 }
@@ -65,8 +91,8 @@ input[type='checkbox']:checked::after {
 
 .custom-checkbox {
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     background: #fff;
     border: 2px solid #7e9bbd;
     border-radius: 4px;
@@ -88,12 +114,16 @@ input[type='checkbox']:checked::after {
     top: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: 0.2s ease-in;
+    margin-top: -2px;
 }
 
 li a {
     float: right;
     margin: 0 5px 0 1px;
     text-decoration: none;
+    text-align: center;
+    line-height: 21px;
+
 }
 
 h1 {
@@ -101,8 +131,16 @@ h1 {
 }
 
 .input-body {
-    width: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
 
+.input-box {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
 }
 
 .btn-need {

@@ -11,13 +11,15 @@
 
 <body>
     <div class="list-body">
-        <h1>Shopping list</h1>
+        <label for="item">
+            <h1>Shopping list</h1>
+        </label>
         <div class="input-body">
-
-            <input type="text" name="item" placeholder="Add Item">
-            <button id="addNeed" class="btn-need">Need</button>
-            <button id="addHave" class="btn-have">Have</button>
-
+            <input type="text" id="item" name="item" placeholder="Add Item" autocomplete="off">
+            <div class="input-box">
+                <button id="addNeed" class="btn-need">Need</button>
+                <button id="addHave" class="btn-have">Have</button>
+            </div>
         </div>
         <h2> Need: </h2>
         <ul class='need-list'>

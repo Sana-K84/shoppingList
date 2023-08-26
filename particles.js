@@ -1,10 +1,10 @@
-const rrr = () => {
+const tuning = () => {
     particlesJS('particles-js',
 
         {
             "particles": {
                 "number": {
-                    "value": 180,
+                    "value": 80,
                     "density": {
                         "enable": true,
                         "value_area": 800
@@ -120,4 +120,4 @@ const rrr = () => {
 
     );
 }
-rrr()
+tuning()

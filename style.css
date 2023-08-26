@@ -30,6 +30,10 @@ body {
     border-radius: 1em;
     padding: 1em;
     margin: 10px;
+    border-top: 2px solid rgb(63 81 181 / 50%);
+    border-left: 2px solid rgb(63 81 181 / 50%);
+    border-right: 2px solid rgb(56 119 150 / 50%);
+    border-bottom: 2px solid rgb(56 119 150 / 50%);
 }
 
 
@@ -53,11 +57,9 @@ input[type='text']::placeholder {
 
 input[type='text']:focus {
     color: #212529;
-    background-color: #fff;
-
+    background-color: wheat;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgb(255 255 255 / 25%);
-
 }
 
 ul {
@@ -129,8 +131,12 @@ li a {
     text-decoration: none;
     text-align: center;
     line-height: 21px;
-
 }
+
+li a:hover {
+    color: red;
+}
+
 
 .need-list li {
     background: transparent;
